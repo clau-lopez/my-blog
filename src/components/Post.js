@@ -6,22 +6,23 @@ const items = [
   {
     id: 1,
     title: "Titulo uno",
-    summary: " aiusdha dfsfn sa sl flashlksfkas",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 2,
     title: "titulo dos",
-    summary: " aiusdha dfsfn sa sl flashlks sd s dc sd csd cdfkas",
+    summary: "Vestibulum fermentum lectus vitae luctus consequat",
   },
   {
     id: 3,
     title: "titulo tres",
-    summary: " aiusdha dfsfn sa sl f we fw ef wef weflashlksfkas",
+    summary:
+      "Suspendisse commodo at eros id condimentum. Nulla sit amet nisl ante.",
   },
   {
     id: 4,
     title: "titulo cuatro",
-    summary: " aiusdha dfsfn sa sl flashlksfkas",
+    summary: "Maecenas nibh urna, facilisis in porttitor a, tempus id tortor",
   },
 ];
 
@@ -34,7 +35,7 @@ const bg_color = [
   "#d3ccfc",
   "#faa489",
 ];
-const contianer = {
+const container = {
   visible: {
     transition: {
       staggerChildren: 0.6,
@@ -69,11 +70,11 @@ function Post({ post, index }) {
     <WrapItem>
       <Center>
         <AnimatePresence>
-          <motion.div animate="visible" initial="hidden" variants={contianer}>
+          <motion.div animate="visible" initial="hidden" variants={container}>
             <motion.div variants={item}>
-              <Box bg={bg_color[index]} p={10} borderRadius="10px" fontFamily="FiraCode">
+              <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px">
                 <motion.h1>{post.title}</motion.h1>
-                {post.summary}
+                <motion.p>{post.summary}</motion.p>
               </Box>
             </motion.div>
           </motion.div>
