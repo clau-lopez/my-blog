@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Link to="/">Home</Link>
       <Link to="/contact">Contact</Link>
-
+      
       <Switch>
         <Route path="/contact" component={Contact} />
         <Route path="/" component={Home} />
