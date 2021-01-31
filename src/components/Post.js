@@ -1,30 +1,7 @@
 import React from "react";
-import { AnimateSharedLayout, motion, AnimatePresence } from "framer-motion";
-import { Wrap, WrapItem, Center, Box } from "@chakra-ui/react";
+import {motion, AnimatePresence } from "framer-motion";
+import { WrapItem, Center, Box } from "@chakra-ui/react";
 
-const items = [
-  {
-    id: 1,
-    title: "Titulo uno",
-    summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    id: 2,
-    title: "titulo dos",
-    summary: "Vestibulum fermentum lectus vitae luctus consequat",
-  },
-  {
-    id: 3,
-    title: "titulo tres",
-    summary:
-      "Suspendisse commodo at eros id condimentum. Nulla sit amet nisl ante.",
-  },
-  {
-    id: 4,
-    title: "titulo cuatro",
-    summary: "Maecenas nibh urna, facilisis in porttitor a, tempus id tortor",
-  },
-];
 
 const bg_color = [
   "#f7d052",
@@ -53,17 +30,7 @@ const item = {
     opacity: 1,
   },
 };
-function Board() {
-  return (
-    <AnimateSharedLayout type="crossfade">
-      <Wrap spacing="30px" justify="center">
-        {items.map((item, index) => (
-          <Post key={item.id} index={index} post={item} />
-        ))}
-      </Wrap>
-    </AnimateSharedLayout>
-  );
-}
+
 
 function Post({ post, index }) {
   return (
@@ -73,7 +40,7 @@ function Post({ post, index }) {
           <motion.div animate="visible" initial="hidden" variants={container}>
             <motion.div variants={item}>
               <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px">
-                <motion.h1>{post.title}</motion.h1>
+                <motion.h2>{post.title}</motion.h2>
                 <motion.p>{post.summary}</motion.p>
               </Box>
             </motion.div>
@@ -84,4 +51,4 @@ function Post({ post, index }) {
   );
 }
 
-export default Board;
+export default Post;
