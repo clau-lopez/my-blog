@@ -44,8 +44,8 @@ function Board() {
   return (
     <Grid templateRows="repeat(12, 1fr)">
       <AnimateSharedLayout type="crossfade">
-        <GridItem rowSpan={3}>
-          <Center marginBottom="-30px" color="#6272a4">
+        <GridItem rowSpan={1}>
+          <Center mb={2} color="#6272a4">
             <h1>My Posts</h1>
           </Center>
         </GridItem>
