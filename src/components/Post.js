@@ -12,13 +12,6 @@ const bg_color = [
   "#d3ccfc",
   "#faa489",
 ];
-const container = {
-  visible: {
-    transition: {
-      staggerChildren: 0.6,
-    },
-  },
-};
 
 const item = {
   hidden: {
@@ -37,14 +30,12 @@ function Post({ post, index }) {
     <WrapItem>
       <Center>
         <AnimatePresence>
-          <motion.div animate="visible" initial="hidden" variants={container}>
             <motion.div variants={item}>
               <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px">
                 <motion.h2>{post.title}</motion.h2>
                 <motion.p>{post.summary}</motion.p>
               </Box>
             </motion.div>
-          </motion.div>
         </AnimatePresence>
       </Center>
     </WrapItem>

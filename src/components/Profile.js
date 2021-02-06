@@ -1,5 +1,5 @@
 import { Box, Center, Grid, GridItem, IconButton } from "@chakra-ui/react";
-import { AiFillGithub } from "react-icons/ai"
+import { AiFillGithub } from "react-icons/ai";
 import React from "react";
 import Typewriter from "typewriter-effect";
 
@@ -42,9 +42,8 @@ const Profile = () => {
                   <IconButton
                     variant="outline"
                     colorScheme="telegram"
-                    icon={<AiFillGithub/>}
+                    icon={<AiFillGithub />}
                     hasStripe="true"
-                  
                   />
                 </GridItem>
               </Grid>

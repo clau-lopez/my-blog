@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./Post";
-import { AnimateSharedLayout } from "framer-motion";
-import { Center, Wrap } from "@chakra-ui/react";
+import { AnimateSharedLayout, motion } from "framer-motion";
+import { Center, Wrap, Grid, GridItem } from "@chakra-ui/react";
 
 const items = [
   {
@@ -25,21 +25,42 @@ const items = [
     title: "titulo cuatro",
     summary: "Maecenas nibh urna, facilisis in porttitor a, tempus id tortor",
   },
+
+  {
+    id: 5,
+    title: "titulo cinco",
+    summary: "Maecenddas nibh urna, facilisis in porttitor a, tempus id tortor",
+  },
 ];
+const container = {
+  visible: {
+    transition: {
+      staggerChildren: 0.075,
+    },
+  },
+};
 
 function Board() {
   return (
-    <AnimateSharedLayout type="crossfade">
-      <Center marginBottom="-30px" color="#6272a4">
-        <h1>My Posts</h1>
-      </Center>
+    <Grid templateRows="repeat(12, 1fr)">
+      <AnimateSharedLayout type="crossfade">
+        <GridItem rowSpan={3}>
+          <Center marginBottom="-30px" color="#6272a4">
+            <h1>My Posts</h1>
+          </Center>
+        </GridItem>
 
-      <Wrap spacing="30px" justify="center">
-        {items.map((item, index) => (
-          <Post key={item.id} index={index} post={item} />
-        ))}
-      </Wrap>
-    </AnimateSharedLayout>
+        <GridItem rowSpan={9}>
+          <motion.div variants={container} initial="hidden" animate="visible">
+            <Wrap spacing="30px" justify="center" mr="30px" ml="30px">
+              {items.map((item, index) => (
+                <Post key={item.id} index={index} post={item} />
+              ))}
+            </Wrap>
+          </motion.div>
+        </GridItem>
+      </AnimateSharedLayout>
+    </Grid>
   );
 }
 
