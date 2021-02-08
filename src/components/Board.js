@@ -6,29 +6,29 @@ import { Center, Wrap, Grid, GridItem } from "@chakra-ui/react";
 const items = [
   {
     id: 1,
-    title: "Titulo uno",
+    title: "Título uno",
     summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: 2,
-    title: "titulo dos",
+    title: "Título dos",
     summary: "Vestibulum fermentum lectus vitae luctus consequat",
   },
   {
     id: 3,
-    title: "titulo tres",
+    title: "Título tres",
     summary:
       "Suspendisse commodo at eros id condimentum. Nulla sit amet nisl ante.",
   },
   {
     id: 4,
-    title: "titulo cuatro",
+    title: "Título cuatro",
     summary: "Maecenas nibh urna, facilisis in porttitor a, tempus id tortor",
   },
 
   {
     id: 5,
-    title: "titulo cinco",
+    title: "Título cinco",
     summary: "Maecenddas nibh urna, facilisis in porttitor a, tempus id tortor",
   },
 ];
