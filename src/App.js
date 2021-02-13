@@ -5,6 +5,7 @@ import customFonts from "./styles/font-face";
 import React from "react";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
       <Global styles={customFonts} />
       <Router>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route path="/detail/:postId">
+            <Detail />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
         </Switch>
       </Router>
     </ChakraProvider>

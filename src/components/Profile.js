@@ -32,13 +32,11 @@ const Profile = () => {
                   <h2>Software Engineer</h2>
                 </GridItem>
                 <GridItem rowSpan={2} color="#8be9fd" textAlign="center">
-                  <text>
-                    <Typewriter
-                      onInit={(typewriter) => {
-                        typewriter.typeString(message).deleteChars(28).start();
-                      }}
-                    />
-                  </text>
+                  <Typewriter
+                    onInit={(typewriter) => {
+                      typewriter.typeString(message).deleteChars(28).start();
+                    }}
+                  />
                 </GridItem>
                 <GridItem rowSpan={2} color="white" textAlign="center">
                   <a href="https://github.com/colopezfuentes">
@@ -46,17 +44,15 @@ const Profile = () => {
                       variant="outline"
                       colorScheme="telegram"
                       icon={<AiFillGithub />}
-                      hasStripe="true"
                       mr={2}
                     />
                   </a>
-                 
+
                   <a href="https://www.linkedin.com/in/claudia-lopez-51608bb5/">
                     <IconButton
                       variant="outline"
                       colorScheme="telegram"
                       icon={<AiFillLinkedin />}
-                      hasStripe="true"
                     />
                   </a>
                 </GridItem>

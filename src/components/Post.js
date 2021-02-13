@@ -1,7 +1,7 @@
 import React from "react";
-import {motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { WrapItem, Center, Box } from "@chakra-ui/react";
-
+import { Link } from "react-router-dom";
 
 const bg_color = [
   "#f7d052",
@@ -24,18 +24,19 @@ const item = {
   },
 };
 
-
 function Post({ post, index }) {
   return (
     <WrapItem>
       <Center>
         <AnimatePresence>
-            <motion.div variants={item}>
+          <motion.div variants={item}>
+            <Link to={`/detail/${post.id}`}>
               <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px">
                 <motion.h2>{post.title}</motion.h2>
                 <motion.p>{post.summary}</motion.p>
               </Box>
-            </motion.div>
+            </Link>
+          </motion.div>
         </AnimatePresence>
       </Center>
     </WrapItem>
