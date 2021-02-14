@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Center, Grid, GridItem, IconButton } from "@chakra-ui/react";
 import { AiFillHome } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
+import { ArrowBackIcon } from "@chakra-ui/icons";
 
 function Detail() {
   let { postId } = useParams();
@@ -17,14 +18,23 @@ function Detail() {
           mb={10}
           templateColumns="repeat(12, 1fr)"
         >
-          <GridItem colSpan={3}>
-            <Link to=''>
-              <IconButton
-                variant="outline"
-                colorScheme="telegram"
-                icon={<AiFillHome />}
-              />
-            </Link>
+          <GridItem colSpan={3} className="testclass">
+            <Box>
+              <Center className="centerCenter">
+                <Grid templateRows="repeat(6, 1fr)">
+                  <GridItem rowSpan={4} textAlign="center">
+                    <Link to="/">
+                      <IconButton
+                        mt={50}
+                        variant="outline"
+                        colorScheme="telegram"
+                        icon={<ArrowBackIcon />}
+                      />
+                    </Link>
+                  </GridItem>
+                </Grid>
+              </Center>
+            </Box>
           </GridItem>
           <GridItem colSpan={6}>
             <Box bg="#282a36" w="100%" h="100%" color="white">
