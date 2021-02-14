@@ -31,7 +31,7 @@ function Post({ post, index }) {
         <AnimatePresence>
           <motion.div variants={item}>
             <Link to={`/detail/${post.id}`}>
-              <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px">
+              <Box bg={bg_color[index]} p={10} borderRadius="10px" maxW="450px" boxShadow="xl">
                 <motion.h2>{post.title}</motion.h2>
                 <motion.p>{post.summary}</motion.p>
               </Box>
